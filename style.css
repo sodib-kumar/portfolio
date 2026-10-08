@@ -94,6 +94,766 @@ body {
     transition: 0.3s ease;
 }
 
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(255, 115, 0, 0.15),
+            transparent 30%
+        ),
+        #080808;
+}
+
+
+/* Background Grid */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.hero-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1200px, 90%);
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 80px 0;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.hero-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: #ff7300;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.hero-label::before {
+
+    content: "";
+
+    width: 35px;
+
+    height: 2px;
+
+    background: #ff7300;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.hero-title {
+
+    font-size: clamp(
+        55px,
+        7vw,
+        95px
+    );
+    color:white;
+    margin: 10px 0;
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+}
+
+
+.hero-title span {
+    color: #ff7300;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.role-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 32px;
+
+    min-height: 45px;
+
+    font-size: clamp(
+        22px,
+        3vw,
+        34px
+    );
+
+    font-weight: 600;
+}
+
+
+.role-static {
+    color: #999999;
+}
+
+
+.role-text {
+
+    display: inline-block;
+
+    min-width: 260px;
+
+    color: #ff7300;
+
+    font-weight: 700;
+}
+
+
+/* Typing Cursor */
+
+.role-text::after {
+
+    content: "|";
+
+    display: inline-block;
+
+    margin-left: 5px;
+
+    color: #ff7300;
+
+    animation: cursorBlink 0.7s infinite;
+}
+
+
+@keyframes cursorBlink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+
+    max-width: 580px;
+
+    margin-top: 28px;
+
+    color: #999999;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+
+.hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 55px;
+
+    padding: 0 28px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Orange Button */
+
+.hero-btn-primary {
+
+    background: #ff7300;
+
+    color: #ffffff;
+}
+
+
+.hero-btn-primary:hover {
+
+    background: #ff8a2b;
+
+    transform: translateY(-4px);
+}
+
+
+/* Outline Button */
+
+.hero-btn-outline {
+
+    border: 1px solid #444444;
+
+    color: #ffffff;
+}
+
+
+.hero-btn-outline:hover {
+
+    border-color: #ff7300;
+
+    color: #ff7300;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.hero-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 35px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #4ade80;
+
+    box-shadow: 0 0 12px #4ade80;
+
+    animation: statusPulse 1.5s infinite;
+}
+
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+
+        transform: scale(0.7);
+    }
+}
+
+
+/* =========================
+   RIGHT VISUAL
+========================= */
+
+.hero-visual {
+
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Orange Glow */
+
+.orange-glow {
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: #ff7300;
+
+    filter: blur(110px);
+
+    opacity: 0.14;
+}
+
+
+/* =========================
+   IMAGE MOCKUP
+========================= */
+
+.image-mockup {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(
+        400px,
+        80%
+    );
+
+    padding: 10px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.06
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.15
+    );
+
+    backdrop-filter: blur(15px);
+
+    transform: rotate(3deg);
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.image-mockup:hover {
+
+    transform:
+        rotate(0deg)
+        translateY(-10px);
+}
+
+
+/* Browser Header */
+
+.mockup-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        5px
+        6px
+        11px;
+}
+
+
+.mockup-header span {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #555555;
+}
+
+
+.mockup-header span:first-child {
+
+    background: #ff7300;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero-image {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+
+.hero-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                115,
+                0,
+                0.25
+            ),
+            transparent 50%
+        );
+
+    pointer-events: none;
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter: grayscale(15%);
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.image-mockup:hover
+.hero-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FLOATING CARD
+========================= */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 0;
+
+    bottom: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    background:
+        rgba(
+            15,
+            15,
+            15,
+            0.92
+        );
+
+    border: 1px solid #333333;
+
+    backdrop-filter: blur(15px);
+
+    animation:
+        floatingCard 4s
+        ease-in-out infinite;
+}
+
+
+.floating-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ff7300;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.floating-card strong {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.floating-card small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 10px;
+}
+
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   CIRCLE
+========================= */
+
+.circle {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 80px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border:
+        1px solid
+        #ff7300;
+
+    border-radius: 50%;
+
+    opacity: 0.7;
+}
+
+
+.circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 8px;
+
+    top: 10px;
+
+    right: 10px;
+
+    border-radius: 50%;
+
+    background: #ff7300;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding:
+            90px
+            0
+            60px;
+    }
+
+
+    .hero-content {
+
+        text-align: center;
+    }
+
+
+    .hero-label {
+
+        justify-content: center;
+    }
+
+
+    .role-wrapper {
+
+        justify-content: center;
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hero-status {
+
+        justify-content: center;
+    }
+
+
+    .hero-visual {
+
+        min-height: 550px;
+    }
+
+}
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -154,5 +914,105 @@ body {
 
     .menu-toggle.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .hero-container {
+
+        width: 90%;
+
+        padding:
+            70px
+            0
+            40px;
+    }
+
+
+    .hero-title {
+
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .role-wrapper {
+
+        font-size: 21px;
+
+        justify-content: center;
+    }
+
+
+    .role-text {
+
+        min-width: 220px;
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .hero-btn {
+
+        width: 100%;
+    }
+
+
+    .hero-visual {
+
+        min-height: 470px;
+    }
+
+
+    .image-mockup {
+
+        width: 80%;
+    }
+
+
+    .floating-card {
+
+        left: 0;
+
+        bottom: 55px;
+
+        padding: 10px;
+    }
+
+
+    .floating-icon {
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .floating-card strong {
+
+        font-size: 11px;
+    }
+
+
+    .circle {
+
+        width: 55px;
+
+        height: 55px;
+
+        right: 0;
+
+        bottom: 30px;
     }
 }
