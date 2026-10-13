@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const roleText = document.querySelector(".role-text");
 
     const roles = [
-        "WordPress",
-        "Framer",
-        "Webflow",
-        "UI/UX",
+        "WordPress Developer",
+        "Framer Developer",
+        "Webflow Developer",
+        "UI/UX Designer",
         "Custom Website"
     ];
 
