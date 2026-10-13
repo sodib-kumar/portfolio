@@ -1,164 +1,286 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sodib Kumar | Web Developer</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    
+
+    <!-- Header -->
     <header class="site-header">
-    <div class="container">
-        <a href="#" class="site-logo">SODIB</a>
+        <div class="container header-container">
 
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Home</a>
-                </li>
+            <a href="#home" class="site-logo">SODIB<span>.</span></a>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Work</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Services</a>
-                </li>
+            <a href="#contact" class="header-button">Let's Talk ↗</a>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Work</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
-        <a href="#" class="header-button">Let's Talk</a>
-
-        <button class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-    </header>
-    
-    <section class="hero">
-
-        <div class="hero-container">
-
-            <!-- LEFT CONTENT -->
-            <div class="hero-content">
-
-                <div class="hero-label">
-                    HELLO, I'M
-                </div>
-
-                <h1 class="hero-title">
-                    Sodib <span>Kumar</span>
-                </h1>
-
-                <!-- ANIMATED ROLE -->
-                <div class="role-wrapper">
-
-                    <span class="role-static">
-                        I'm a
-                    </span>
-
-                    <span class="role-text"></span>
-
-                </div>
-
-                <p class="hero-description">
-                    I build modern, responsive and high-performing websites
-                    that combine clean design, smooth interactions and powerful
-                    functionality. I help businesses turn ideas into professional
-                    digital experiences.
-                </p>
-
-                <!-- BUTTONS -->
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="hero-btn hero-btn-primary">
-                        View My Work
-                        <span>↗</span>
-                    </a>
-
-                    <a href="#contact" class="hero-btn hero-btn-outline">
-                        Contact Me
-                    </a>
-
-                </div>
-
-                <!-- STATUS -->
-                <div class="hero-status">
-
-                    <span class="status-dot"></span>
-
-                    Available for freelance work
-
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT VISUAL -->
-            <div class="hero-visual">
-
-                <div class="orange-glow"></div>
-
-                <!-- IMAGE MOCKUP -->
-                <div class="image-mockup">
-
-                    <div class="mockup-header">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <div class="hero-image">
-
-                        <!-- CHANGE THIS IMAGE -->
-                        <img
-                            src="./image/Sodib.png"
-                            alt="Sodib Kumar"
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- FLOATING CARD -->
-                <div class="floating-card">
-
-                    <div class="floating-icon">
-                        &lt;/&gt;
-                    </div>
-
-                    <div>
-                        <strong>Creative Developer</strong>
-
-                        <small>
-                            Building digital experiences
-                        </small>
-                    </div>
-
-                </div>
-
-
-                <div class="circle"></div>
-
-            </div>
+            <button class="menu-toggle" aria-label="Toggle menu"
+                aria-expanded="false" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </div>
+    </header>
 
-    </section>
+    <main>
 
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="hero-label">HELLO, I'M</div>
+
+                    <h1 class="hero-title">
+                        Sodib <span>Kumar</span>
+                    </h1>
+
+                    <div class="role-wrapper">
+                        <span class="role-static">I'm a</span>
+                        <span class="role-text">WordPress Developer</span>
+                    </div>
+
+                    <p class="hero-description">
+                        I build modern, responsive and user-friendly websites
+                        that look great and work smoothly on every device.
+                        I help businesses turn their ideas into professional
+                        digital experiences.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="hero-btn primary-btn">
+                            View My Work <span>↗</span>
+                        </a>
+
+                        <a href="#contact" class="hero-btn outline-btn">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <div class="hero-status">
+                        <span class="status-dot"></span>
+                        Available for freelance work
+                    </div>
+
+                </div>
+
+                <!-- Profile Image -->
+                <div class="hero-visual">
+
+                    <div class="orange-glow"></div>
+
+                    <div class="image-mockup">
+
+                        <div class="mockup-header">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="hero-image">
+                            <img src="./image/Sodib.png"
+                                alt="Sodib Kumar">
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card">
+                        <div class="floating-icon">&lt;/&gt;</div>
+
+                        <div>
+                            <strong>Creative Developer</strong>
+                            <small>Building digital experiences</small>
+                        </div>
+                    </div>
+
+                    <div class="circle"></div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+                <div>
+                    <span class="section-label">ABOUT ME</span>
+                    <h2>I create websites that bring <span>ideas to life.</span></h2>
+                </div>
+
+                <div class="about-content">
+                    <p>
+                        I'm Sodib Kumar, a web developer who enjoys building
+                        clean, modern and useful websites. I work with
+                        WordPress, Elementor, Framer and Webflow.
+                    </p>
+
+                    <p>
+                        I'm also learning more about HTML, CSS and JavaScript
+                        to build better web experiences and create websites
+                        that fit each client's needs.
+                    </p>
+
+                    <a href="#contact" class="text-link">
+                        Let's work together ↗
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-section" id="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MY SERVICES</span>
+                    <h2>What I can <span>do for you.</span></h2>
+                    <p>
+                        I help turn ideas into responsive websites
+                        with clean design and useful functionality.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+                        <span class="service-number">01</span>
+                        <h3>WordPress Development</h3>
+                        <p>
+                            WordPress websites built with Elementor
+                            and layouts that are easy to manage.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">02</span>
+                        <h3>Framer Websites</h3>
+                        <p>
+                            Modern Framer websites with responsive
+                            layouts and smooth interactions.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">03</span>
+                        <h3>Webflow Development</h3>
+                        <p>
+                            Clean Webflow pages with consistent styling
+                            and responsive design.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">04</span>
+                        <h3>Custom Websites</h3>
+                        <p>
+                            Custom web pages using HTML, CSS and
+                            JavaScript to meet project requirements.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">MY WORK</span>
+                    <h2>Some of my <span>projects.</span></h2>
+                    <p>
+                        Here are a few examples of the type of websites
+                        I can build. Replace these with your real projects.
+                    </p>
+                </div>
+
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <div class="project-image project-orange">
+                            <span>01 / WORDPRESS</span>
+                            <h3>Business<br>Website.</h3>
+                            <a href="#contact" aria-label="Ask about a business website">↗</a>
+                        </div>
+                        <h4>Business Website</h4>
+                        <p>WordPress · Elementor</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image project-light">
+                            <span>02 / FRAMER</span>
+                            <h3>Creative<br>Studio.</h3>
+                            <a href="#contact" aria-label="Ask about a Framer website">↗</a>
+                        </div>
+                        <h4>Creative Landing Page</h4>
+                        <p>Framer · Web Design</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image project-dark">
+                            <span>03 / DEVELOPMENT</span>
+                            <h3>Made for<br>the web.</h3>
+                            <a href="#contact" aria-label="Ask about a custom website">↗</a>
+                        </div>
+                        <h4>Custom Website</h4>
+                        <p>HTML · CSS · JavaScript</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-container">
+
+                <div>
+                    <span class="section-label">LET'S CONNECT</span>
+                    <h2>Have a project in mind? <span>Let's talk.</span></h2>
+                    <p>
+                        Have an idea for a website? Get in touch and
+                        let's discuss how I can help.
+                    </p>
+                </div>
+
+                <!-- Change this to your email address -->
+                <a href="mailto:sodibkumar52@gmail.com" class="hero-btn primary-btn">
+                    Contact Me ↗
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <a href="#home" class="site-logo">SODIB<span>.</span></a>
+            <p>Designed and built by Sodib Kumar.</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+        </div>
+    </footer>
 
     <script src="all.js"></script>
 </body>
