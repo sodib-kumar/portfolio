@@ -221,7 +221,7 @@ textarea:focus-visible {
   margin: 0 0 2px;
 }
 .hero-title {
-  font: 700 clamp(3rem, 6.2vw, 5.7rem)/0.99 var(--font-heading);
+  font: 700 clamp(2.2rem, 4.5vw, 4.2rem)/1.05 var(--font-heading);
   letter-spacing: -0.075em;
   margin: 0;
   max-width: 700px;
