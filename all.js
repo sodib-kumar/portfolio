@@ -717,7 +717,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Contact form uses mailto; replace the placeholder with your own address.
-  const CONTACT_EMAIL = "your.email@example.com";
+  const CONTACT_EMAIL = "sodibkumar52@gmail.com";
   const contactForm = document.getElementById("contactForm");
   const formNote = document.getElementById("formNote");
   contactForm?.addEventListener("submit", (event) => {
